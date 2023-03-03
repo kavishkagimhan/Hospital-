@@ -15,6 +15,8 @@ import AdminsHome from './components/Admin/AdminsHome';
 import AddDoctorsHome from './components/Admin/AddDoctorsHome';
 import DoctorListHome from './components/Admin/DoctorListHome';
 import { ToastContainer } from 'react-toastify';
+import DoctorlistUser from './components/User/DoctorlistUser';
+import AppoinmentHome from './components/Admin/AppoinmentHome';
 
 function App() {
   return (
@@ -30,11 +32,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/appoinment" element={<Appoinment />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/doctorlist" element={<ContactUs />} />
+          <Route path="/doctorlist" element={<DoctorlistUser />} />
 
           <Route path="/admin" element={<AdminsHome />} />
           <Route path="/admin/add-doctors" element={<AddDoctorsHome/>} />
           <Route path="/admin/doctor-list" element={<DoctorListHome/>} />
+          <Route path="/admin/appoinments" element={<AppoinmentHome/>} />
 
 
 

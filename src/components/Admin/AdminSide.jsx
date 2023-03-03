@@ -14,7 +14,7 @@ const AdminSide = () => {
             </div>
             </Link>
             <div className='flex items-center px-6 py-2 border-b-2 border-green-300  ml-4 gap-4 cursor-pointer hover:bg-[#0f766e] justify-between'>
-                <h2 className='mt-6 text-xl'>Appoinment</h2>
+                <h2 className='mt-6 text-xl'><Link to='/admin/appoinments'>Appoinments</Link></h2>
                 <p className='ml-10 '><BsBookHalf /></p>
             </div>
             <div className='flex items-center px-6 py-2 border-b-2 border-green-300  ml-4 gap-4 cursor-pointer hover:bg-[#0f766e] justify-between'>
