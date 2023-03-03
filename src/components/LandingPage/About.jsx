@@ -3,7 +3,7 @@ import AboutI from '../Image/aabout.png';
 
 const About = () => {
   return (
-    <div>
+    <div className='h-[80vh]'>
       <div className='flex max-w-[70%] mx-auto items-center bg-green-50 shadow-lg rounded-lg  mt-10 h-[300px] hover:drop-shadow-xl'>
         <div className='px-4 py-2'>
           <h1 className='text-6xl text-green-500 font-semibold  w-[50%] py-2'>About Us</h1>
