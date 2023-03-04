@@ -118,7 +118,7 @@ const Appoinment = () => {
                     </button>
                 </div>
                 <div className='mt-32 ml-6 '>
-                    <img className='w-[80%]' src={Image} alt="" />
+                    <img className='w-[80%] ' src={Image} alt="" />
                 </div>
             </div>
         </div>
