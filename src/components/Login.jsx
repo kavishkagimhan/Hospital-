@@ -52,7 +52,7 @@ const Login = () => {
                         <p className='text-xl'><AiOutlineMail /></p>
                     </div>
                     <div className='w-[350px] h-[40px] bg-white items-center mt-4 rounded-lg flex'>
-                        <input className='h-[100%] w-[90%] ml-1 rounded-lg' type="text" placeholder='Enter Your Email'
+                        <input className='h-[100%] w-[90%] ml-1 rounded-lg' type="password" placeholder='Enter Your Email'
                             onChange={(e) => setPassword(e.target.value)}
                         />
                         <p className='text-xl'><BsKey /></p>
