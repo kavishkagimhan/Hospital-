@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className='text-green-500 bg-white shadow-md '>
       <div className='max-w-[90%] mx-auto flex justify-between items-center'>
         <div className='flex items-center w-24 cursor-pointer'>
-          <img src={Logo} alt="rrtr"/>
+          <img src={Logo} alt="rrtr" />
           <div>
             <Link to='/'><h2 className='text-2xl font-semibold uppercase border-b-2'>Hospital</h2></Link>
             <h3 className='text-md '>Health Service</h3>
@@ -17,19 +17,19 @@ const Navbar = () => {
         <div className='flex'>
           <ul className='flex gap-6 px-4 py-2 text-xl font-semibold'>
             <li>
-            <Link to='about' className='hover:text-green-300'>About</Link>
+              <Link to='/about' className='hover:text-green-300'>About</Link>
             </li>
             <li>
-              <Link to='services' className='hover:text-green-300'>Services</Link>
+              <Link to='/services' className='hover:text-green-300'>Services</Link>
             </li>
             <li>
-            <Link to='appoinment' className='hover:text-green-300'>Appoinment</Link>
+              <Link to='/appoinment' className='hover:text-green-300'>Appoinment</Link>
             </li>
             <li>
-              <a className='hover:text-green-300' href="">Medicine</a>
+            <Link to="/">Medicine</Link>
             </li>
             <li>
-            <Link to='contact' className='hover:text-green-300'>Contact Us</Link>
+              <Link to='/contact' className='hover:text-green-300'>Contact Us</Link>
             </li>
           </ul>
         </div>

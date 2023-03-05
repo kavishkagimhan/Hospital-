@@ -18,6 +18,7 @@ import { ToastContainer } from 'react-toastify';
 import DoctorlistUser from './components/User/DoctorlistUser';
 import AppoinmentHome from './components/Admin/AppoinmentHome';
 import Medicine from './components/Medicine';
+import EditDoctors from './components/Admin/Forms/EditDoctors';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/admin/add-doctors" element={<AddDoctorsHome/>} />
           <Route path="/admin/doctor-list" element={<DoctorListHome/>} />
           <Route path="/admin/appoinments" element={<AppoinmentHome/>} />
+          <Route path="/admin/editDoctor/:id" element={<EditDoctors/>} />
 
 
 

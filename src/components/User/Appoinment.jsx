@@ -3,7 +3,7 @@ import Image from '../Image/scn.png'
 import { AiOutlineUser, AiFillCreditCard, AiOutlineHome, AiOutlinePhone, AiOutlineUserAdd } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import appoinmentDataService from '../../Services/AppoinmentService';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Appoinment = () => {

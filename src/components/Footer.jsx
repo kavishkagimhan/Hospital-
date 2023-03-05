@@ -12,16 +12,16 @@ const Footer = () => {
               <Link to="/login">Admin Login</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Services</a>
+            <Link to="/">Services</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Appoinment</a>
+            <Link to="/">Appoinment</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Medicine</a>
+            <Link to="/">Appoinment</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Contact Us</a>
+            <Link to="/">Appoinment</Link>
             </li>
           </ul>
         </div>
@@ -29,19 +29,19 @@ const Footer = () => {
         <div className='py-4'>
           <ul className='px-4 py-2 text-lg'>
             <li>
-              <a className='hover:text-white' href="">About</a>
+            <Link to="/">About</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Services</a>
+            <Link to="/">Service</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Appoinment</a>
+            <Link to="/">Appoinment</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Medicine</a>
+            <Link to="/">Medicine</Link>
             </li>
             <li>
-              <a className='hover:text-white' href="">Contact Us</a>
+            <Link to="/">Pharmacy</Link>
             </li>
           </ul>
         </div>

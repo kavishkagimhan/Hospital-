@@ -24,7 +24,6 @@ const DoctorlistUser = () => {
 
     const getDoctors = async () => {
         const data = await doctorDataService.getAllDoctor();
-        console.log(doctors);
         setDoctors(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 

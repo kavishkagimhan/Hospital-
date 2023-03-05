@@ -1,8 +1,7 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Image from './Image/scn.png'
 import { AiOutlineMail } from "react-icons/ai";
 import { BsKey } from "react-icons/bs";
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
@@ -36,11 +35,11 @@ const Login = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "dark",
-                  });
+                });
             });
 
     }
-    
+
     return (
         <div className='h-[100vh] justify-center  '>
             <div className='w-[800px] h-[60vh] bg-gray-100 mx-auto mt-20 flex rounded-xl shadow-xl justify-between'>
@@ -48,17 +47,17 @@ const Login = () => {
                     <h2 className='mb-4 text-4xl font-semibold text-black'>LogIn</h2>
                     <div className='w-[350px] h-[40px] bg-white items-center  rounded-lg flex'>
                         <input className='h-[100%] w-[90%] ml-1 rounded-lg' type="text" placeholder='Enter Your Email'
-                         onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <p className='text-xl'><AiOutlineMail/></p>
+                        <p className='text-xl'><AiOutlineMail /></p>
                     </div>
                     <div className='w-[350px] h-[40px] bg-white items-center mt-4 rounded-lg flex'>
                         <input className='h-[100%] w-[90%] ml-1 rounded-lg' type="text" placeholder='Enter Your Email'
-                         onChange={(e) => setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
-                        <p className='text-xl'><BsKey/></p>
+                        <p className='text-xl'><BsKey /></p>
                     </div>
-                    <button className='bg-green-400 text-white px-6 py-1 rounded-lg text-xl hover:text-green-500 hover:bg-white mt-[20px]'onClick={onLogin}>
+                    <button className='bg-green-400 text-white px-6 py-1 rounded-lg text-xl hover:text-green-500 hover:bg-white mt-[20px]' onClick={onLogin}>
                         LogIn
                     </button>
                     <p className='text-lg font-thin'>you don't have an account</p>SignUp

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import Image from '../Image/scn.png'
+import React, { useState, useEffect } from 'react';
+import Image from '../../Image/scn.png'
 import { AiOutlineUser, AiFillCreditCard, AiOutlineFieldNumber, AiOutlinePhone } from "react-icons/ai";
-import doctorDataService from '../../Services/DoctorService';
-import { toast, ToastContainer } from 'react-toastify';
+import doctorDataService from '../../../Services/DoctorService';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import AdminSide from '../AdminSide';
 
 
 const EditDoctors = () => {
@@ -14,8 +15,18 @@ const EditDoctors = () => {
     const [specialization, setSpecialization] = useState("")
     const [registerno, setRegisterno] = useState("")
     const navigate = useNavigate();
+    const {id} = useParams();
 
-    const submitButton = async (e) => {
+    useEffect(() => {
+        SetValues(id);
+    }, [])
+
+    const SetValues = async(id) => {
+        const data = await doctorDataService.getDoctor(id);
+        console.log(data);
+    }
+
+    const EditButton = async (e) => {
 
         if (name === "") {
             toast.error('Name is required!', {
@@ -49,7 +60,11 @@ const EditDoctors = () => {
     }
 
     return (
-        <div className='h-[70vh] justify-center  '>
+        <div className='flex'>
+            <div className='w-[20%]'>
+                <AdminSide/>
+            </div>
+            <div className='h-[70vh] justify-center w-[80%] '>
             <div className='w-[800px] h-[80vh] bg-gray-100 mx-auto mt-20 flex rounded-xl shadow-xl justify-between'>
                 <div className='w-[50%] ml-[60px] mt-[100px]'>
                     <h2 className='mb-4 text-4xl font-semibold text-black'>Edit Doctor</h2>
@@ -85,8 +100,8 @@ const EditDoctors = () => {
                         />
                         <p className='text-xl'><AiOutlinePhone /></p>
                     </div>
-                    <button className='bg-green-400 text-white px-6 py-1 rounded-lg text-xl hover:text-green-500 hover:bg-white mt-[20px]' onClick={submitButton}>
-                        Add Doctor
+                    <button className='bg-green-400 text-white px-6 py-1 rounded-lg text-xl hover:text-green-500 hover:bg-white mt-[20px]' onClick={EditButton}>
+                        Edit Doctor
                     </button>
                 </div>
                 <div className='mt-32 ml-6 '>
@@ -94,6 +109,8 @@ const EditDoctors = () => {
                 </div>
             </div>
         </div>
+        </div>
+       
     )
 }
 

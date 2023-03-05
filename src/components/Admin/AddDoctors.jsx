@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from '../Image/scn.png'
 import { AiOutlineUser, AiFillCreditCard, AiOutlineFieldNumber, AiOutlinePhone } from "react-icons/ai";
 import doctorDataService from '../../Services/DoctorService';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 

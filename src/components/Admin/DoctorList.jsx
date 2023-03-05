@@ -29,10 +29,10 @@ const DoctorList = () => {
         setDoctors(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-
     const deleteHandler = async (id) => {
 
         await doctorDataService.deleteDoctor(id).then(() => {
+            alert("Are you sure you want to delete");
             toast.success('Delete Success !', {
                 position: toast.POSITION.TOP_RIGHT
             });
@@ -68,7 +68,7 @@ const DoctorList = () => {
                             </tr>
                         </thead>
                         <tbody className='text-center'>
-                            {doctors.map((doc, index) => {
+                            {doctors.map((doc, id, index) => {
                                 return (
                                     <tr key={doc.id} className='items-center p-4 text-xl border-b-[1px]  border-green-500 hover:bg-gray-400'>
                                         <td className='px-4 py-2 text-left'>{doc.name}</td>
@@ -78,7 +78,7 @@ const DoctorList = () => {
                                         <td className='px-4 py-2 text-left'>
                                             <div className='flex gap-2 ml-8 text-xl cursor-pointer'>
                                                 <AiFillDelete className='hover:bg-green-500' onClick={(e) => deleteHandler(doc.id)} />
-                                               <Link to=''><AiFillEdit className='hover:bg-green-500' /></Link> 
+                                               <Link to={`/admin/editDoctor/${doc.id}`}><AiFillEdit className='hover:bg-green-500'  /></Link> 
                                             </div>
 
                                         </td>

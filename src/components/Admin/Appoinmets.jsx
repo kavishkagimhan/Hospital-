@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import appoinmentDataService from '../../Services/AppoinmentService';
 import { Link } from 'react-router-dom'
-import { AiFillDelete, AiFillEdit } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PuffLoader from "react-spinners/PuffLoader";

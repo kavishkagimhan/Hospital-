@@ -31,9 +31,9 @@ class doctorDataService {
     return getDocs(doctorCollectionRef);
   };
 
-  getStudent = (id) => {
-    const studentDoc = doc(db, "students", id);
-    return getDoc(studentDoc);
+  getDoctor = (id) => {
+    const doctorDoc = doc(db, "doctors", id);
+    return getDoc(doctorDoc);
   };
 }
 
